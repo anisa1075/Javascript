@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    .card{
+        border: 1px solid white ;
+        margin: auto;
+        margin-top: 100px;
+        padding: auto;
+        max-width: 400px;
+        background-color: transparent;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+    }
+    h1{
+        text-align: center;
+        margin-top: 2px;
+        font-size: 30px;
+    }
+    #email{
+        border-radius: 20px ;
+        padding: 15px;
+        margin-left: 30px;
+        width: 300px;
+        background-color: ghostwhite;
+        border: transparent;
+    }
+    #password{
+        border-radius: 20px;
+        padding: 15px;
+        margin-left: 30px;
+        width: 300px;
+        background-color: ghostwhite;
+        border: transparent;
+        
+
+    }
+    #button{
+        border-radius: 40px;
+        padding: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+        background-color: rgb(96, 166, 240);
+        width: 350px;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        border: transparent;
+        margin-top: 10px;
+        
+    }
+    img{
+        width: 200px;
+        display:block; 
+        margin:auto;
+    }
+    #button:hover{
+        background-color: gainsboro;
+    }
+    body{
+        background-color: gainsboro;
+        background: url("https://i.pinimg.com/564x/2e/a8/95/2ea895e0efa0fe9d081734d201ce235c.jpg");
+        background-size: cover;
+        
+    }
+    h5{
+        text-align: right;
+        color: rgb(62, 122, 243);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 1px;
+        margin-right: 10px;
+        
+    }
+    h5:hover{
+        color: grey;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/564x/40/26/6a/40266aa91d83b991faee5c9529858a59.jpg" alt="">
+    <h1>Log In Account Google</h1>
+    <input type="email" value="" id="email" required placeholder=" Email"/>
+    <i class='bx bxs-user'></i><br><br>
+    <input type="password" value="" id="password" required placeholder=" Password"/>
+    <i class='bx bxs-lock-alt'></i>
+    <h5>Forgot Password ?</h5>
+        <input onclick="masuk()" type="button" value="Login" id="button">
+    </div>
+
+    <script>
+    var user = {
+    nama: "Anisa",
+    email: "anisa@gmail.com",
+    password: "12345",
+    role: "admin"
+};
+
+function masuk(){
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    console.log(email);
+    if(user.email == email){
+        if(user.password == password){
+            if(user.role == "admin"){
+                alert("Selamat Datang  " + user.nama);
+                window.location.href = "https://id.pinterest.com/";
+                
+                
+            }
+        }else{
+            alert("Tidak Bisa Masuk");
+        }
+    }else{
+        alert("Bukan Admin!");
+    }
+}
+
+    </script>
+    
+</body>
+</html>

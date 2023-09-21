@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,th,td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 600px;
+        margin: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    body{
+        background-color: antiquewhite;
+    }
+    
+</style>
+<body>
+    
+    <h1>Daftar Susu</h1>
+    <table>
+        <tr>
+            <th>Merk</th>
+            <th>Varian</th>
+            <th>Rasa</th>
+            <th>Deskripsi</th>
+
+        </tr>
+
+        <tr>
+            <td id="merk">Indomilk</td>
+            <td id="varian">200 ml</td>            
+            <td id="rasa">Vanilla</td> 
+            <td id="desc"></td>           
+
+
+        </tr>
+    </table>
+
+
+    <script>
+        const susu = {
+            Merk : "Indomilk",
+            varian : "200 ml",
+            rasa : "Vanilla",
+            deskripsi : function(){
+                return this.Merk + " ini adalah merk susu";
+            }
+        }
+        console.table(susu);
+
+    
+
+        document.getElementById("merk").innerHTML = susu.Merk;
+        document.getElementById("varian").innerHTML = susu.varian;
+        document.getElementById("rasa").innerHTML = susu.rasa;
+        document.getElementById("desc").innerHTML = susu.deskripsi();
+
+
+    </script>
+</body>
+</html>
